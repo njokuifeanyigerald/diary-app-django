@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <hr>
+    <form method="post" class="form-group" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+        <button class="btn btn-block btn-outline-success">submit</button>
+    </form>
+    <br>
+    <a class="text-capitalize" href="/">>>> home</a>
+</div>
+
+{% endblock %}

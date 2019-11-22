@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <hr class="my-4">
+        <div>
+           <p><a href="/add" class="text-capitalize text-center">add a diary </a></p>
+        </div>
+
+        {% for info in list %}
+        <div class="text-center card">
+            <p class="text-center"><strong class="text-mute">{{info.date}}</strong><br>{{info.text}}</p>
+        </div>
+        {% endfor %}
+
+
+</div>
+
+{% endblock %}
